@@ -9,6 +9,18 @@ Qt 在海思hi35xx平台下的编译与运行
 
 * 如果需要编译, 不要使用*.zip包, 否则会出现编译错误
 
+* github无法上传超过100m文件,将源码包切割
+
+```
+split -b 32m -d qt-everywhere-opensource-src-4.8.7.tar.gz qt478_part_ --verbose
+```
+
+* 还原文件
+
+```
+cat qt478_part_* > qt-everywhere-opensource-src-4.8.7.tar.gz
+```
+
 ## hi35xx编译准备
 
 * 按海思文档安装海思编译器, arm-hisiv*-linux- 系列
@@ -102,15 +114,15 @@ linux-*|arm-linux-*|arm-hisiv*: {
 * 可以查看写好的脚本
 
 ```
-1.
+1. https://github.com/lishaoliang/Qt/blob/master/Qt487/build_env.sh
 解压qt4.8.7包
 将修改好的 io.pri 文件拷贝到对应目录
 将修改好的 arm-hisiv300-linux-g++ 目录拷贝到对应目录
 
-2.
+2. https://github.com/lishaoliang/Qt/blob/master/Qt487/qt_config.sh
 qt的常用配置选项
 
-3.
+3. https://github.com/lishaoliang/Qt/blob/master/Qt487/build.sh
 ./configure *** 生成Makefile文件
 
 ```
