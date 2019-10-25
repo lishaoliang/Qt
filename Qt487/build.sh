@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 
+# path
+QT_PREFIX=/qt_lib
+echo "-prefix=$QT_PREFIX"
 
+# config
 source ./qt_config.sh
-echo $CFG_ARM_SHARED
+echo $CFG_ARM_STATIC_MIN
 
 # 
 sh ./build_env.sh
@@ -12,6 +16,6 @@ cd ./qt-everywhere-opensource-src-4.8.7
 
 # 
 ./configure \
--prefix /qt_lib_hisiv300 \
+-prefix $QT_PREFIX \
 -platform linux-g++ -xplatform qws/arm-hisiv300-linux-g++ \
-$CFG_ARM_SHARED
+$CFG_ARM_STATIC_MIN

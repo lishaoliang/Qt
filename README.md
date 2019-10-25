@@ -65,14 +65,15 @@ QMAKE_OBJCOPY           = arm-hisiv300-linux-objcopy
 QMAKE_STRIP             = arm-hisiv300-linux-strip
 
 # modifications to gcc-base.conf
-QMAKE_CFLAGS_RELEASE += -march=armv7-a -mcpu=cortex-a7 -mfloat-abi=softfp -mfpu=vfpv3-d16
-QMAKE_CXXFLAGS_RELEASE += -march=armv7-a -mcpu=cortex-a7 -mfloat-abi=softfp -mfpu=vfpv3-d16
+#QMAKE_CFLAGS_RELEASE += -march=armv7-a -mcpu=cortex-a7 -mfloat-abi=softfp -mfpu=vfpv3-d16
+#QMAKE_CXXFLAGS_RELEASE += -march=armv7-a -mcpu=cortex-a7 -mfloat-abi=softfp -mfpu=vfpv3-d16
 
 load(qt_config)
 ```
 
 * a. 修改编译器
 * b. 添加编译宏QMAKE_CFLAGS_RELEASE/QMAKE_CXXFLAGS_RELEASE, 软浮点运算
+* c. b步骤可以使用 -no-armfpa 选项替换掉
 
 ### 3. 修正Arm下部分未编译的文件
 
@@ -192,4 +193,30 @@ cd ./qt-everywhere-opensource-src-4.8.7
 make
 make install
 
+```
+
+### 11. 修改背景底色
+
+* QT默认底色: QColor(0x20, 0xb0, 0x50)
+* 修改默认底色: QWSServer::setBackground(QColor(0x0,0x0,0x0,0x0))
+
+```
+#include <QApplication>
+#include <QWSServer>
+
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    QWSServer::setBackground(QColor(0x0,0x0,0x0,0x0));
+
+    ...
+
+    return a.exec();
+}
+```
+
+### 12. 基础依赖库次序
+
+```
+-lQtGui -lQtNetwork -lQtCore
 ```

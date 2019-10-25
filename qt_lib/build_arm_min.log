@@ -1,0 +1,87 @@
+-prefix=/qt_lib
+-opensource -confirm-license -release -static -embedded arm -fast -qt-freetype -qt-libjpeg -no-largefile -no-exceptions -no-accessibility -no-stl -no-qt3support -no-xmlpatterns -no-multimedia -no-audio-backend -no-phonon -no-phonon-backend -no-webkit -no-javascript-jit -no-script -no-scripttools -no-declarative -no-declarative-debug -no-gif -no-libpng -no-libtiff -no-libmng -no-openssl -nomake tools -nomake examples -nomake demos -nomake docs -nomake translations -no-nis -no-cups -no-iconv -no-pch -no-dbus -no-gtkstyle -no-nas-sound -no-opengl -no-openvg -no-sm -no-xshape -no-xvideo -no-xsync -no-xinerama -no-xcursor -no-xfixes -no-sql-driver -no-xrandr -no-xrender -no-mitshm -no-fontconfig -no-xinput -no-xkb -no-glib -no-qvfb -no-mmx -no-3dnow -no-sse -no-sse2 -no-sse3 -no-ssse3 -no-sse4.1 -no-sse4.2 -no-avx -no-neon -little-endian -no-armfpa -depths 16,32
+
+This is the Qt for Embedded Linux Open Source Edition.
+
+You are licensed to use this software under the terms of
+the Lesser GNU General Public License (LGPL) versions 2.1.
+You are also licensed to use this software under the terms of
+the GNU General Public License (GPL) versions 3.
+
+You have already accepted the terms of the  license.
+
+Creating qmake. Please wait...
+
+
+Building on:   linux-g++
+Building for:  qws/arm-hisiv300-linux-g++
+Architecture:  arm
+Host architecture: x86_64
+
+Build .................. libs
+Configuration ..........  cross_compile release embedded exceptions_off  minimal-config small-config medium-config large-config full-config no-pkg-config static embedded reduce_exports ipv6 clock-gettime clock-monotonic mremap getaddrinfo ipv6ifname getifaddrs inotify jpeg no-mng no-png no-gif no-tiff freetype zlib concurrent svg release
+Debug .................. no
+Qt 3 compatibility ..... no
+QtDBus module .......... no
+QtConcurrent code ...... yes
+QtGui module ........... yes
+QtScript module ........ no
+QtScriptTools module ... no
+QtXmlPatterns module ... no
+Phonon module .......... no
+Multimedia module ...... no
+SVG module ............. yes
+WebKit module .......... no
+Declarative module ..... no
+Support for S60 ........ no
+Symbian DEF files ...... no
+STL support ............ no
+PCH support ............ no
+MMX/3DNOW/SSE/SSE2/SSE3. no/no/no/no/no
+SSSE3/SSE4.1/SSE4.2..... no/no/no
+AVX..................... no
+iWMMXt support ......... no
+NEON support ........... no
+IPv6 support ........... yes
+IPv6 ifname support .... yes
+getaddrinfo support .... yes
+getifaddrs support ..... yes
+Accessibility .......... no
+NIS support ............ no
+CUPS support ........... no
+Iconv support .......... no
+Glib support ........... no
+GStreamer support ...... no
+PulseAudio support ..... no
+Large File support ..... no
+GIF support ............ no
+TIFF support ........... no
+JPEG support ........... yes (qt)
+PNG support ............ no
+MNG support ............ no
+zlib support ........... yes
+Session management ..... no
+Embedded support ....... arm
+Freetype2 support ...... yes
+Graphics (qt) .......... linuxfb multiscreen
+Graphics (plugin) ......
+Decorations (qt) ....... styled windows default
+Decorations (plugin) ...
+Keyboard driver (qt) ... tty
+Keyboard driver (plugin) ..
+Mouse driver (qt) ...... pc linuxtp
+Mouse driver (plugin) ..
+OpenGL support ......... no
+OpenVG support ......... no
+SQLite support ......... plugin (qt)
+OpenSSL support ........ no
+Alsa support ........... no
+ICD support ............ no
+libICU support ......... no
+Use system proxies ..... no
+
+
+WARNING: Using static linking will disable the use of dynamically
+loaded plugins. Make sure to import all needed static plugins,
+or compile needed modules into the library.
+
